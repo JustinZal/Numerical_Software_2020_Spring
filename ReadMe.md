@@ -1,4 +1,6 @@
-# Numerical Software 2020 Spring
+# Jacobs University Numerical Software 2020 Spring
+
+Author: Justinas Zaliaduonis
 
 ### Setup
 Before installing packages venv should be configured and activated
@@ -20,3 +22,6 @@ Funcion can be tested by running the following command:
 `cd Project_A && python3 projectA.py`
 
 files `vehicles.pdf` and `vehicles.csv` should appear after running the command.
+
+**Disclaimer**: The function was written assuming, that the first line of input TXT file contains titles of the columns and 
+that it atleast contains 2 columns  

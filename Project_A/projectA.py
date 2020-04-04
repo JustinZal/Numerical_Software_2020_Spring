@@ -15,4 +15,4 @@ def file_work(file_name, title='Input Data', x_label='x axis', y_label='y axis')
 
     return x, y
 
-file_work('vehicles')
+print(file_work('vehicles'))

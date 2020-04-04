@@ -17,6 +17,6 @@ columns into CSV output. Folder `Project_A` contains `vehicle.txt` sample data t
 
 Funcion can be tested by running the following command:
 
-`python3 ./Project_A/projectA.py`
+`cd Project_A && python3 projectA.py`
 
 files `vehicles.pdf` and `vehicles.csv` should appear after running the command.

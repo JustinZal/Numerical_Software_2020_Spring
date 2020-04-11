@@ -32,4 +32,10 @@ that it atleast contains 2 columns
  1 or 2 and the function order n in the form of integer and plots the required Spherical Bassel Function in 3D using 
  matplotlib and numpy and scipy libraries. The transition from 1D to 2D input is made by composing spherical
  2D vector norm functions. Plot is saved in a file named `bassel.pdf`
+ 
+ ###TODO
+ 
+ - Complete project C
+ - Write main.py function, that calls all project functions
+ 
     

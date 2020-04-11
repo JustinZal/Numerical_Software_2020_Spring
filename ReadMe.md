@@ -24,4 +24,12 @@ Funcion can be tested by running the following command:
 files `vehicles.pdf` and `vehicles.csv` should appear after running the command.
 
 **Disclaimer**: The function was written assuming, that the first line of input TXT file contains titles of the columns and 
-that it atleast contains 2 columns  
+that it atleast contains 2 columns
+
+### Project B description
+
+`plot_bassel_3d` takes 2 list arguments as ranges of x and y e.g. `[1,4]`, Bassel function type in the form of integer
+ 1 or 2 and the function order n in the form of integer and plots the required Spherical Bassel Function in 3D using 
+ matplotlib and numpy and scipy libraries. The transition from 1D to 2D input is made by composing spherical
+ 2D vector norm functions. Plot is saved in a file named `bassel.pdf`
+    

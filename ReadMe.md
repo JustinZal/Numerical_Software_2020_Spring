@@ -34,7 +34,7 @@ that it atleast contains 2 columns
  2D vector norm functions. Plot is saved in a file named `Project_B/bassel.pdf`
 
 
-### Project B description
+### Project C description
  `solve_oscilator_equation` takes a series of numbers and solves the `van der Pol oscillator` using differential equation
  and saves the plot in the file `Project_C/oscillator.pdf`. The solution is achieved using `scipy.integrate.odeint` function,
  the plot is made using `matplotlib.pyplot` function.  

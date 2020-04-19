@@ -39,9 +39,10 @@ that it atleast contains 2 columns
  and saves the plot in the file `Project_C/oscillator.pdf`. The solution is achieved using `scipy.integrate.odeint` function,
  the plot is made using `matplotlib.pyplot` function.  
  
- ###TODO
+ ### TODO
  
  - Complete project D
  - Write main.py function, that calls all project functions
+ - Remove Makefile and venv from architecture for simplicity
  
     

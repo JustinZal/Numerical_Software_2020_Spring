@@ -44,5 +44,4 @@ that it atleast contains 2 columns
  - Complete project D
  - Write main.py function, that calls all project functions
  - Remove Makefile and venv from architecture for simplicity
- 
-    
+ - Fix naming convention for folders    

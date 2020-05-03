@@ -6,3 +6,6 @@ packages:
 
 clean:
 	rm -rf ./venv
+
+pdf:
+	rm -rf ./*.pdf

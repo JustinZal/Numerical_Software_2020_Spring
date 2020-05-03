@@ -3,13 +3,13 @@ from scipy import special
 import matplotlib.pyplot as plt
 
 funcs = {
-    1: special.yn,
-    2: special.jn,
+    1: special.jn,
+    2: special.yn,
 }
 
 name_map = {
-    1: 'y',
-    2: 'j'
+    2: 'y',
+    1: 'j'
 }
 
 def spherical_bassel(x, y, function_type, n):
@@ -39,7 +39,7 @@ def plot_bassel_3d(x_range, y_range, function_type, n):
 
     ax.set_xlabel('x axis')
     ax.set_ylabel('y axis')
-    name = name_map[n]
+    name = name_map[function_type]
     SUB = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     ax.set_zlabel(f'{name}{n}(x,y)'.translate(SUB))
     ax.set_title('Spherical Bassel Function')

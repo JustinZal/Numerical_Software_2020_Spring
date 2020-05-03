@@ -24,7 +24,7 @@ Funcion can be tested by running the following command:
 files `Project_A/vehicles.pdf` and `Project_A/vehicles.csv` should appear after running the command.
 
 **Disclaimer**: The function was written assuming, that the first line of input TXT file contains titles of the columns and
-that it atleast contains 2 columns
+that it at least contains 2 columns
 
 ### Project B description
 

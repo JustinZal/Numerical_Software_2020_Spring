@@ -7,5 +7,5 @@ packages:
 clean:
 	rm -rf ./venv
 
-pdf:
-	rm -rf ./*.pdf
+file_clean:
+	rm -rf ./*.pdf ./*.log ./*.aux ./*.gz ./*.csv

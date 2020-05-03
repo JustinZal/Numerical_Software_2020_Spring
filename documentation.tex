@@ -1,0 +1,27 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[english]{babel}
+
+\begin{document}
+\title{Numerical Software Lab Project}
+\author{Justinas Zaliaduonis}
+\maketitle
+
+
+\section{Introduction and Motivation}
+
+Projects are part of Numerical Software Lab in Jacobs University. Tasks were completed using \textbf{Python3} programming language and open source scientific computing software packages \textbf{numpy}, \textbf{matplotlib} and \textbf{scipy}.
+
+\section{Project Structure} 
+
+In total, there are 6 sub-projects, indexed alphabetically A-E. Every one of them contains a separate file in the form of \textit{projectN.py}. Project also contains a file called \textit{main.py}, where all of the sub-project functions are called with sample inputs and sample outputs are printed. Some of the sub-project functions also create and save PDF graphs, which will be saved in the root folder of the project after the main function will run.
+
+\section{Project A}
+\textbf{Goal:} Create a function that takes TXT file name as an input, extracts first 2 columns from the file as a \textit{numpy} array, graphs them on X-Y axis, saves graph to a PDF file, converts data to CSV file and returns the input as 2 separate arrays. \\ \\ \textbf{Execution: } The goal was achieved by creating a \textit{file\_work} function, that takes in \textit{file\_name} as an input and and performs the required manipulations and plotting. The function also has default inputs \textit{save, title, x\_label, y\_label}, set to True, 'title', 'x\_label', 'y\_label' respectively, which allow function execution without any files saved and enables additional graph labeling functionality. \\ \\ \textbf{Data sources:} Data sets for the function are saved in files \textit{vehicles.txt} and \textit{virus.txt} The former was taken from an American Vehicle Association website NMVTIS and models vehicle efficiency and the latter was produced by me, which models daily fictional virus cases from the TV series \textit{Walking Dead}. \\ \\ \textbf{Disclaimer:} The function was written assuming, that the first line of input TXT file contains titles of the columns and
+that it at least contains 2 columns.
+
+
+\section{Project B}
+
+
+\end{document}

@@ -17,5 +17,4 @@ solve_oscilator_equation(3, 2, 5, 2, 13)
 plot_eigen_values()
 
 #Project E function
-x, y = file_work('virus', False)
-plot_data(x, y, 'Walking dead virus', 'Days', 'Infections per day')
+plot_data(*(file_work('virus', False)), 'Walking dead virus', 'Days', 'Infections per day')

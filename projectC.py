@@ -2,10 +2,12 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
+
 def equation(y, t, params):
     x, v = y
     miu, A, omega = params
 
+    #Separate 2 order differential equation into 2 1st order differential equations
     return [v, miu * (1 - (x ** 2)) * v - x + A*np.sin(omega * t)]
 
 
@@ -14,8 +16,11 @@ def solve_equation(miu, A, omega, t, x0, v0):
 
 
 def solve_oscilator_equation(miu, A, omega, start, end, x0=1, v0=0):
+    # Clean plot memory
     plt.clf()
     t = np.arange(start, end, 0.01)
+
+    #Get solutions for differential equation
     solution = solve_equation(miu, A, omega, t, x0, v0)
 
     fig = plt.figure(1, figsize=(8, 8))

@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def file_work(file_name, save=True, title='Input Data', x_label='x axis', y_label='y axis'):
+    plt.clf()
     file = np.loadtxt(f'{file_name}.txt', skiprows=1, unpack=True)
     x = file[0]
     y = file[1]

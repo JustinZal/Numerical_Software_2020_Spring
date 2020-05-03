@@ -8,7 +8,8 @@ def fit_function(x, a, c):
     return (a * (x ** 3)) + c
 
 
-def plot_data(x_array, y_array):
+def plot_data(x_array, y_array, title=None, x_axis=None, y_axis=None):
+    plt.clf()
     interpolation_interval = np.linspace(
         min(x_array), max(x_array), len(x_array) * 5
     )
@@ -24,6 +25,10 @@ def plot_data(x_array, y_array):
     interpolation_interval, cubic_results, '--',
     x_array, fit_result, 'b-'
     )
-    
-    plt.legend(['fit function', 'data', 'cubic interpolation'], loc='best')
-    plt.savefig('projectB.pdf')
+
+    plt.xlabel(x_axis)
+    plt.ylabel(y_axis)
+    plt.title(title)
+
+    plt.legend(['data', 'cubic interpolation', 'fit function'], loc='best')
+    plt.savefig('projectE.pdf', bbox_inches='tight')

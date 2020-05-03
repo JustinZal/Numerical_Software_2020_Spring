@@ -14,6 +14,7 @@ def solve_equation(miu, A, omega, t, x0, v0):
 
 
 def solve_oscilator_equation(miu, A, omega, start, end, x0=1, v0=0):
+    plt.clf()
     t = np.arange(start, end, 0.01)
     solution = solve_equation(miu, A, omega, t, x0, v0)
 

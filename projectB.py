@@ -24,6 +24,7 @@ def spherical_bassel(x, y, function_type, n):
 
 
 def plot_bassel_3d(x_range, y_range, function_type, n):
+    plt.clf()
     x_start, x_end = x_range
     y_start, y_end = y_range
 

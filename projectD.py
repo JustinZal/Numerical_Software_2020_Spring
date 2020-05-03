@@ -17,6 +17,7 @@ def get_eigen_values(matrix):
 
 
 def plot_eigen_values(N=500, M=100):
+    plt.clf()
     d_input = np.linspace(0, M, N)
     results = np.array([systemmatrix(d) for d in d_input])
     eigen_values = np.array([get_eigen_values(matrix) for matrix in results])
@@ -33,5 +34,3 @@ def plot_eigen_values(N=500, M=100):
     plt.ylabel('Im(z)')
     plt.title('Eigen values')
     plt.savefig('Eigen_Values.pdf')
-
-plot_eigen_values()

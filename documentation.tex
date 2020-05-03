@@ -17,11 +17,31 @@ Projects are part of Numerical Software Lab in Jacobs University. Tasks were com
 In total, there are 6 sub-projects, indexed alphabetically A-E. Every one of them contains a separate file in the form of \textit{projectN.py}. Project also contains a file called \textit{main.py}, where all of the sub-project functions are called with sample inputs and sample outputs are printed. Some of the sub-project functions also create and save PDF graphs, which will be saved in the root folder of the project after the main function will run.
 
 \section{Project A}
-\textbf{Goal:} Create a function that takes TXT file name as an input, extracts first 2 columns from the file as a \textit{numpy} array, graphs them on X-Y axis, saves graph to a PDF file, converts data to CSV file and returns the input as 2 separate arrays. \\ \\ \textbf{Execution: } The goal was achieved by creating a \textit{file\_work} function, that takes in \textit{file\_name} as an input and and performs the required manipulations and plotting. The function also has default inputs \textit{save, title, x\_label, y\_label}, set to True, 'title', 'x\_label', 'y\_label' respectively, which allow function execution without any files saved and enables additional graph labeling functionality. \\ \\ \textbf{Data sources:} Data sets for the function are saved in files \textit{vehicles.txt} and \textit{virus.txt} The former was taken from an American Vehicle Association website NMVTIS and models vehicle efficiency and the latter was produced by me, which models daily fictional virus cases from the TV series \textit{Walking Dead}. \\ \\ \textbf{Disclaimer:} The function was written assuming, that the first line of input TXT file contains titles of the columns and
+\textbf{Goal:} Create a function that takes TXT file name as an input, extracts first 2 columns from the file as a \textit{numpy} array, graphs them on X-Y axis, saves graph to a PDF file, converts data to CSV file and returns the input as 2 separate arrays. \\ \\ \textbf{Execution: } The goal was achieved by creating a \textit{file\_work} function, that takes in \textit{file\_name} as an input and and performs the required manipulations and plotting. The function also has default inputs \textit{save, title, x\_label, y\_label}, set to True, 'title', 'x\_label', 'y\_label' respectively, which allow function execution without any files saved and enables additional graph labeling functionality. Output is returned as a tuple of arrays.
+\\ \\ \textbf{Data sources:} Data sets for the function are saved in files \textit{vehicles.txt} and \textit{virus.txt} The former was taken from an American Vehicle Association website NMVTIS and models vehicle efficiency and the latter was produced by me, which models daily fictional virus cases from the TV series \textit{Walking Dead}. \\ \\ \textbf{Disclaimer:} The function was written assuming, that the first line of input TXT file contains titles of the columns and
 that it at least contains 2 columns.
 
 
 \section{Project B}
 
+\textbf{Goal:} Create a function that s 3D-plots asked Spherical Bessel function. \\ \\ \textbf{Execution:} The goal was achieved by creating \textit{plot\_bassel\_3d} function, that takes in x\_range and y\_range variable in the form of list. \textit{Ex:} [2, 10], \textit{function\_type} (1 or 2) and function order \textit{n} in the form of integer and plots asked function into the file named \textit{bassel.pdf}.
+
+
+\section{Project C}
+
+\textbf{Goal:} Write a function, that solves van der Pol oscillator with the specified differential equation and plots the solution relationships. \\ \\ \textbf{Execution:} The goal was achieved by creating a function named \textit{solve\_oscilator\_equation}, that takes in integers \textit{miu}, \textit{A} and \textit{omega}, that serve as constants for the differential equation. Function also takes required parameters \textit{start} and \textit{end} as indicators for solution neighborhood and optionals parameters \textit{x0} and \textit{v0} as initial conditions for the differential equation, that default to 1 and 0 respectively. \textit{x versus time}, \textit{v versus time} and \textit{v versus x} relationships are graphed and saved into a file named \textit{oscillator.pdf}. 
+
+
+\section{Project D}
+
+\textbf{Goal:} Write a functions, that 1) Generates a required matrix, 2) Extracts eigenvalues from a matrix, 3) Iterates function 1) with different input values, passes those input values to the function 2) and then plots eigenvalues on a complex coordinate plane. \\ \\ \textbf{Execution:} Goal 1) was achieved by creating a function \textit{systemmatrix} that takes a required real number \textit{d} and an optional real number \textit{k} (defaults to -1000), and then returns a required matrix in the form of \textit{numpy} array. Goal 2) was achieved by creating a function named \textit{get\_eigen\_values}, that takes in \textit{matrix} in the form of \textit{numpy} array, and then utilizes \textit{scipy} package to return eigenvalues of a matrix. Goal 3) Was achieved by writing a function named \textit{plot\_eigen\_values}, that takes in 2 optional natural numbers \textit{N} and \textit{M}, which default to 100 and 500 respectively. Number M indicates the range of iteration, and number N indicates the density of iteration. After the iteration is completed, all eigen values are collected and ploted on a complex number plane. The plot is saved in the file named \textit{Eigen\_Values.pdf}.
+
+\section{Project E}
+
+\textbf{Goal:} Write a function that takes parameters from function from project A, and plots data, fit function and cubic interpolation of the input. \\ \\ \textbf{Execution:} The goal was achieved by creating a function named \textit{plot\_data}, that takes in the output of a function \textit{file\_work} as input in the form of \textit{x\_array} and \textit{y\_array}. The function also takes in additional optimal parameters of title, \textit{x\_axis} and \textit{y\_axis} to specify the plot details. If optional arguments are not passed, the plot will be without title or labels. All 3 plots are plotted onto one graph and saved in a file named \textit{projectE.pdf}. The fit function was chosen of the form $f(x)=ax^{3}+c$
+
+\section{Remarks}
+
+- Before every plot function \textit{plt.clf()} is called to clean the previous plotting memory 
 
 \end{document}

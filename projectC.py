@@ -35,7 +35,7 @@ def solve_oscilator_equation(miu, A, omega, start, end, x0=1, v0=0):
     ax3.plot(solution[:, 0], solution[:, 1], '.', ms=1)
     ax3.set_xlabel('x(t)')
     ax3.set_ylabel('v(t)')
-    ax3.set_title('v versus t graph')
+    ax3.set_title('v versus x graph')
 
     plt.tight_layout()
     plt.savefig('oscillator.pdf')

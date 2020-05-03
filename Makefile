@@ -9,3 +9,6 @@ clean:
 
 file_clean:
 	rm -rf ./*.pdf ./*.log ./*.aux ./*.gz ./*.csv
+
+generate_documentation:
+	pdflatex -synctex=1 -interaction=nonstopmode "documentation".tex

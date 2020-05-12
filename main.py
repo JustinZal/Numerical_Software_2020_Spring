@@ -95,21 +95,22 @@ def equation(y, t, params):
     miu, A, omega = params
 
     #Separate 2 order differential equation into 2 1st order differential equations
-    return [v, miu * (1 - (x ** 2)) * v - x + A*np.sin(omega * t)]
+    return [v, A * np.sin(omega * t) - x + miu *(1-x**2)*v]
 
 
 def solve_equation(miu, A, omega, t, x0, v0):
-    return odeint(equation, [x0, v0], t, args=([miu, A, omega],))
+    parameters = [miu, A, omega]
+    return odeint(equation, [x0, v0], t, args=(parameters,))
 
 
 def projectC(miu, A, omega, start, end, x0=1, v0=0):
     # Clean plot memory
     plt.clf()
-    t = np.arange(start, end, 0.01)
+    t = np.arange(start, end, 0.05)
 
     #Get solutions for differential equation
     solution = solve_equation(miu, A, omega, t, x0, v0)
-
+    
     fig = plt.figure(1, figsize=(8, 8))
     ax1 = fig.add_subplot(311)
     ax1.plot(t, solution[:, 0])
@@ -259,13 +260,13 @@ def projectF(t,x):
 
 
 # #Project A function
-print(projectA('edata35.dat', True, 'Project main data', 'Project x axis', 'Project Y axis'))
+projectA('edata35.dat', True, 'Project main data', 'Project x axis', 'Project Y axis')
 
 # #Project B function
 projectB([0,5], [1,6], 1, 3)
 
 # #Project C function
-print(projectC(10, 12, 3, 2, 13, 1, 4))
+projectC(0.2, 0.32, 1.15,  0, 100, 0, 1)
 
 # #Project D function
 projectD()
@@ -274,4 +275,4 @@ projectD()
 projectE(*(projectA('edata35.dat', False)))
 
 #Project F function
-projectF(*(projectC(10, 12, 3, 2, 13, 1, 4)))
+projectF(*(projectC(0.2, 0.32, 1.15,  0, 100, 0, 1)))
